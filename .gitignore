@@ -48,3 +48,7 @@ Thumbs.db
 *.mov
 *.wmv
 
+Server2/mvnw
+Server2/.gitignore
+Server2/mvnw.cmd
+Server2/.mvn/
