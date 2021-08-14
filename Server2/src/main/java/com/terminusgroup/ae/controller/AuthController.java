@@ -1,4 +1,4 @@
-package com.terminusgroup.ae.controller.user;
+package com.terminusgroup.ae.controller;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;

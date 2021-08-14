@@ -1,10 +1,8 @@
 package com.terminusgroup.ae.dto;
 
 import lombok.Getter;
-import lombok.NonNull;
 import lombok.Setter;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 

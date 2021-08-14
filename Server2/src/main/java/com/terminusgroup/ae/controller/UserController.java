@@ -1,22 +1,19 @@
-package com.terminusgroup.ae.controller.user;
+package com.terminusgroup.ae.controller;
 
 
-import com.terminusgroup.ae.dto.UserDto;
 import com.terminusgroup.ae.model.User;
 import com.terminusgroup.ae.repository.RoleRepository;
 import com.terminusgroup.ae.repository.UserRepository;
-import com.terminusgroup.ae.service.UserService;
-import com.terminusgroup.ae.util.Message.Message;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/v2.0/users")
-public class ManageUser {
+public class UserController {
 
 
     @Autowired
