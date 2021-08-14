@@ -30,84 +30,16 @@ public class ManageUser {
         return u;
     }
 
-    @GetMapping("/listunresponsiveusers")
-    public List<User> listunresponsiveusers()
-    {
-        List<User> u= userRepository.findAllByIsEnabledfalse();
-        return u;
-    }
-
-    @Autowired
-    UserService userService;
-    @PostMapping("/acceptuser")
-    public ResponseEntity<Message<String>> acceptuser(@RequestBody UserDto userDto)
-    {
-        try
-        {
-            Message<String> res = userService.responceuser(userDto.getEmail(),userDto.isEnable());
-            return ResponseEntity.ok(res);
-        }
-        catch (Exception e)
-        {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
-        }
-    }
 
 
-    @PostMapping("/deleteuser")
-    public ResponseEntity<Message<String>> deleteuser(@RequestBody UserDto userDto)
-    {
-        try
-        {
-            Message<String> res = userService.deleteuser(userDto.getEmail(), userDto.isEnable());
-            return ResponseEntity.ok(res);
-        }
-        catch (Exception e)
-        {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
-        }
-    }
 
 
-    @PostMapping("/blockuser")
-    public ResponseEntity<Message<String>> blockuser(@RequestBody UserDto userDto)
-    {
-        try
-        {
-            Message<String> res = userService.responceuser(userDto.getEmail(), userDto.isEnable());
-            return ResponseEntity.ok(res);
-        }
-        catch (Exception e)
-        {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
-        }
-    }
 
-    @PostMapping("/changepasswordbyadmin")
-    public ResponseEntity<Message<String>> changepasswordbyadmin(@RequestBody UserDto userDto)
-    {
-        try
-        {
-            Message<String> res = userService.changepassword(userDto.getEmail(),userDto.getPassword());
-            return ResponseEntity.ok(res);
-        }
-        catch (Exception e)
-        {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
-        }
-    }
 
-    @PostMapping("/changepasswordbyuser")
-    public ResponseEntity<Message<String>> changepasswordbyuser(@RequestBody UserDto userDto)
-    {
-        try
-        {
-            Message<String> res = userService.changepasswordbyuser(userDto.getEmail(),userDto.getOldpassword(),userDto.getNewpassword());
-            return ResponseEntity.ok(res);
-        }
-        catch (Exception e)
-        {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
-        }
-    }
+
+
+
+
+
+
 }

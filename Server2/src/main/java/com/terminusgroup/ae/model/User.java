@@ -1,5 +1,8 @@
 package com.terminusgroup.ae.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
@@ -12,7 +15,13 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 @Entity
 @Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"email"})})
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+
 public class User implements UserDetails,  Serializable {
+
+    private static final long serialVersionUID = 8802307066086045692L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -134,6 +143,4 @@ public class User implements UserDetails,  Serializable {
         this.created_at = created_at;
     }
 
-    public User() {
-    }
 }

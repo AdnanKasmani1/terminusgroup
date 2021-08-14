@@ -22,6 +22,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
 import javax.sql.DataSource;
+import java.util.Arrays;
 
 @Configuration
 @EnableAuthorizationServer
@@ -58,6 +59,7 @@ public class AuthServerOAuth2Config extends AuthorizationServerConfigurerAdapter
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.applyPermitDefaultValues();
+        config.setAllowedOrigins(Arrays.asList("http://localhost:8081"));
 
         source.registerCorsConfiguration("/**", config);
         CorsFilter filter = new CorsFilter(source);
