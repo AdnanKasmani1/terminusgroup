@@ -38,7 +38,6 @@ CREATE TABLE `device` (
 
 LOCK TABLES `device` WRITE;
 /*!40000 ALTER TABLE `device` DISABLE KEYS */;
-INSERT INTO `device` VALUES (1,_binary '\0',_binary '','123456789','0565697710'),(2,_binary '\0',_binary '','12345678','0565697710'),(3,_binary '\0',_binary '','1099999','03332446611'),(4,_binary '\0',_binary '','545645645','03332446611'),(5,_binary '\0',_binary '','12345678900','0565697710'),(6,_binary '\0',_binary '','12211212','0565697710'),(7,_binary '\0',_binary '','','12345689'),(8,_binary '\0',_binary '','123456',''),(9,_binary '\0',_binary '','1234567654321',''),(10,_binary '\0',_binary '','123','123'),(11,_binary '\0',_binary '','12345678777','0565697777710');
 /*!40000 ALTER TABLE `device` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-08-14 15:09:41
+-- Dump completed on 2021-08-14 15:26:14
