@@ -25,12 +25,6 @@
                   
                     },
                     {
-                        href: '/configureDevice',
-                        title: 'Configure Device',
-                        icon: 'fa fa-user',
-                    
-                    },
-                    {
                         href: '/login',
                         title: 'Logout',
                         icon: 'fa fa-user',
